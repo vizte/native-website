@@ -1,2 +1,2 @@
 # native-website
-First native website "Češi národ chatařů"
+native "Češi národ chatařů"

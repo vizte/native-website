@@ -1,0 +1,2572 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Dancing Script', cursive;
+    font-family: 'Open Sans Condensed', sans-serif;
+    scroll-behavior: smooth;
+}
+
+/* parallax start */
+
+.parallax
+{
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: linear-gradient(#2980B9, #FFFFFF);
+}
+
+
+#section
+{
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+#section::before
+{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background: linear-gradient(to top, #003048, transparent);
+}
+
+#section img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    pointer-events: none;
+}
+
+#section img#mountains_front
+{
+    z-index: 10;
+    object-fit: contain;
+    width: 150%;
+    margin-top: 300px;
+}
+
+#section img#stars
+{
+    margin-left: -500px;
+    width: 150%;
+}
+
+#text
+{
+    position: absolute;
+    right: -1000px;
+    top: 100px;
+    color: #000000;
+    white-space: nowrap;
+    font-size: 10em;
+    z-index: 9;
+    font-family: 'Dancing Script';
+}
+
+#btn
+{
+    text-decoration: none;
+    font-family: 'Open Sans Condensed';
+    display: inline-block;
+    padding: 8px 30px;
+    border-radius: 40px;
+    background: #fff;
+    color: #0083B0;
+    font-size: 1.5em;
+    z-index: 9;
+    transform: translateY(100px);
+}
+
+#btn:hover
+{
+    color: #fff;
+    background: #000000;
+}
+
+.uvod
+{
+    position: relative;
+    padding: 100px;
+    background: #000000;
+}
+
+.uvod h2
+{
+    font-size: 2em;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* parallax end */
+
+.nadpisRekonstrukce
+{
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nadpisRekonstrukce h2
+{
+    color: #fff;
+    font-size: 80px;
+    font-family: 'Dancing Script';
+}
+
+.containerAnicka
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/anicka5.jpeg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+/* start Anička */
+
+.row1
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col1
+{
+    flex-basis: 50%;
+}
+
+/* css MAPA start */
+
+.place .mapa
+{
+    width: 80px;
+}
+
+.place .tuAnicka
+{
+    width: 20px;
+    margin-left: -40px;
+    margin-bottom: 40px;
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce
+{
+    0% {
+        transform: translateY(-10px);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(-10px);
+    }
+}
+
+/* css MAPA end */
+
+/* konec Anička */
+
+.cards
+{
+    flex-basis: 50%;
+}
+
+h1{
+    font-family: 'Dancing Script';
+    color: #fff;
+    font-size: 60px;
+}
+
+p
+{
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: lighter;
+}
+
+a
+{
+    color: #fff;
+    text-decoration: none;
+}
+
+.btn
+{
+    padding: 15px 45px;
+    border: 1px solid #fff;
+    border-radius: 0.5em;
+    display: inline-block;
+    margin-top: 2em;
+    background-color: transparent;
+    transition: .3s;
+}
+
+.btn:hover
+{
+    background-color: #fff;
+    color: #000;
+}
+
+.popup
+{
+    position: fixed;
+    padding: 30px;
+    max-width: 700px;
+    border-radius: 2em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s, visibility 0s linear .5s;
+    z-index: 1;
+}
+
+.popup:target
+{
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+}
+
+/* .popup-close
+{
+    position: fixed;
+    padding: 10px;
+    padding: 10px;
+    max-width: 500px;
+    border-radius: 0.5em;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+} */
+
+.popup .close
+{
+    position: absolute;
+    right: 10px;
+    top: -2px;
+    color: #000;
+    transition: color .3s;
+    font-size: 2em;
+    line-height: 1.5;
+    font-weight: 700;
+}
+
+.popup .close:hover
+{
+    color: rgb(136, 121, 82);
+}
+
+.close-popup
+{
+    background-color: #000;
+    cursor: default;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .5s, visibility 0s linear .5s;
+}
+
+.popup:target + .close-popup
+{
+    opacity: 1;
+    visibility: visible;
+    transition-delay: 0s;
+}
+
+.popup p
+{
+    color: #000;
+}
+
+/* konec popup */
+
+.card
+{
+    width: 230px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+    overflow: hidden;
+}
+
+#card1
+{
+    background-image: url(../images/anicka1.jpg);
+}
+
+#card2
+{
+    background-image: url(../images/anicka2.jpg);
+}
+
+#card3
+{
+    background-image: url(../images/anicka3.jpg);
+}
+
+#card4
+{
+    background-image: url(../images/anicka4.jpg);
+}
+#card5
+{
+    background-image: url(../images/mjolk1.jpg);
+}
+
+#card6
+{
+    background-image: url(../images/mjolk2.jpg);
+}
+
+#card7
+{
+    background-image: url(../images/mjolk3.jpg);
+}
+
+#card8
+{
+    background-image: url(../images/mjolk4.jpg);
+}
+
+#card9
+{
+    background-image: url(../images/ujezera1.jpg);
+}
+
+#card10
+{
+    background-image: url(../images/ujezera2.jpg);
+}
+
+#card11
+{
+    background-image: url(../images/ujezera3.jpg);
+}
+
+#card12
+{
+    background-image: url(../images/ujezera4.jpg);
+}
+
+#card13
+{
+    background-image: url(../images/sumava1.jpg);
+}
+
+#card14
+{
+    background-image: url(../images/sumava2.jpg);
+}
+
+#card15
+{
+    background-image: url(../images/sumava3.jpg);
+}
+
+#card16
+{
+    background-image: url(../images/sumava4.jpg);
+}
+
+#card17
+{
+    background-image: url(../images/jizerky2.jpg);
+}
+
+#card18
+{
+    background-image: url(../images/jizerky3.jpg);
+}
+
+#card19
+{
+    background-image: url(../images/jizerky4.jpg);
+}
+
+#card20
+{
+    background-image: url(../images/jizerky5.jpg);
+}
+
+#card21
+{
+    background-image: url(../images/vranov2.jpg);
+}
+
+#card22
+{
+    background-image: url(../images/vranov3.jpg);
+}
+
+#card23
+{
+    background-image: url(../images/vranov4.jpg);
+}
+
+#card24
+{
+    background-image: url(../images/vranov5.jpg);
+}
+
+#card25
+{
+    background-image: url(../images/ASlovensko1.jpg);
+}
+
+#card26
+{
+    background-image: url(../images/ASlovensko2.jpg);
+}
+
+#card27
+{
+    background-image: url(../images/ASlovensko3.jpg);
+}
+
+#card28
+{
+    background-image: url(../images/ASlovensko5.jpg);
+}
+
+#card29
+{
+    background-image: url(../images/AQuebec2.jpg);
+}
+
+#card30
+{
+    background-image: url(../images/AQuebec1.jpg);
+}
+
+#card31
+{
+    background-image: url(../images/AQuebec4.jpg);
+}
+
+#card32
+{
+    background-image: url(../images/AQuebec5.jpeg);
+}
+
+#card33
+{
+    background-image: url(../images/AKalifornie2.jpg);
+}
+
+#card34
+{
+    background-image: url(../images/AKalifornie3.jpg);
+}
+
+#card35
+{
+    background-image: url(../images/AKalifornie4.jpg);
+}
+
+#card36
+{
+    background-image: url(../images/AKalifornie5.jpg);
+}
+
+#card37
+{
+    background-image: url(../images/ANolla1.jpg);
+}
+
+#card38
+{
+    background-image: url(../images/ANolla2.jpg);
+}
+
+#card39
+{
+    background-image: url(../images/ANolla3.jpg);
+}
+
+#card40
+{
+    background-image: url(../images/ANolla4.jpg);
+}
+
+#card41
+{
+    background-image: url(../images/KvetLois2.jpg);
+}
+
+#card42
+{
+    background-image: url(../images/KvetLois3.jpg);
+}
+
+#card43
+{
+    background-image: url(../images/KvetLois4.jpg);
+}
+
+#card44
+{
+    background-image: url(../images/KvetLois5.jpg);
+}
+
+#card45
+{
+    background-image: url(../images/Miramari2.jpg);
+}
+
+#card46
+{
+    background-image: url(../images/Miramari3.jpg);
+}
+
+#card47
+{
+    background-image: url(../images/Miramari4.jpg);
+}
+
+#card48
+{
+    background-image: url(../images/Miramari5.jpg);
+}
+
+#card49
+{
+    background-image: url(../images/MobileHut2.jpg);
+}
+
+#card50
+{
+    background-image: url(../images/MobileHut3.jpg);
+}
+
+#card51
+{
+    background-image: url(../images/MobileHut4.jpg);
+}
+
+#card52
+{
+    background-image: url(../images/MobileHut5.jpg);
+}
+
+.card:hover
+{
+    transform: translateY(-10px);
+}
+
+.card::before
+{
+    content: '';
+    position: absolute;
+    top: var(--y);
+    left: var(--x);
+    transform: translate(-50%,-50%);
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: #fff;
+    transition: width 0.5s, height 0.5s;
+    opacity: 50%;
+}
+
+.card:hover::before
+{
+    width: 600px;
+    height: 600px;
+    opacity: 50%;
+}
+
+h5
+{
+    color: #fff;
+    text-shadow: 0 0 5px #999;
+}
+
+.card:hover h5
+{
+    color: #000;
+}
+
+
+/* start Mjolk (Buková) */
+
+.containerMjolk
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/mjolk5.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.row2
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col2
+{
+    flex-basis: 50%;
+}
+
+.place .tuMjolk
+{
+    width: 20px;
+    margin-left: -55px;
+    margin-bottom: 50px;
+    animation: bounce 2s infinite;
+}
+
+/* POROVNÁVAČKA */
+
+.pozadiCompare
+{
+    width: 100%;
+    height: 100vh;
+    background-color: #000;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.containerCompare
+{
+    height: 67.5vmin;
+    width: 95vmin;
+    position: relative;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    border-radius: 1em;
+}
+
+.pozadiCompare img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+#my-img
+{
+    clip-path: polygon(0 0 , 50% 0 , 50% 100% , 0 100%);
+}
+
+#slider
+{
+    position: relative;
+    -webkit-appearance: none;
+    width: calc( 100% + 40px );
+    height: 100%;
+    margin-left: -20px;
+    background-color: transparent;
+    outline: none;
+}
+
+#slider::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    height: 40px;
+    width: 40px;
+    background: url(../images/slider-icon.png),
+    rgba(255,255,255,0.3);
+    border: 3px solid #fff;
+    border-radius: 50%;
+    background-size: contain;
+    cursor: pointer;
+}
+
+/* konec Mjolk (Buková) */
+
+/* start U jezera */
+
+.containerUjezera
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/ujezera7.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.row3
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col3
+{
+    flex-basis: 50%;
+}
+
+.place .tuUjezera
+{
+    width: 20px;
+    margin-left: -65px;
+    margin-bottom: 50px;
+    animation: bounce 2s infinite;
+}
+
+/* konec U jezera */
+
+/* začátek UK */
+.nadpisUK
+{
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nadpisUK h2
+{
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Dancing Script';
+}
+
+.wrapperUK
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    background: #000;
+}
+
+.containerUK
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+}
+
+.containerUK .cardUK
+{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 5%;
+}
+
+.containerUK .cardUK .imgBxUK,
+.containerUK .cardUK .contentBxUK
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.containerUK .cardUK .imgBxUK img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerUK .cardUK .contentBxUK::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: left;
+    transition-delay: 0.5s;
+}
+
+.containerUK .cardUK:hover .contentBxUK::before
+{
+    transform: scaleX(1);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+    transition-delay: 0s;
+}
+
+.containerUK .cardUK .contentBxUK
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerUK .cardUK .contentBxUK .contentUK
+{
+    position: relative;
+    padding: 30px;
+    z-index: 1;
+    transition: 0.5s;
+    transform: translateX(-500px);
+    transition-delay: 0s;
+}
+
+.containerUK .cardUK:hover .contentBxUK .contentUK
+{
+    transform: translateX(0px);
+    transition-delay: 0.5s;
+}
+
+.containerUK .cardUK .contentBxUK .contentUK h3
+{
+    font-size: 30px;
+    font-family: 'Dancing Script';
+    letter-spacing: 1px;
+}
+
+.containerUK .cardUK .contentBxUK .contentUK p
+{
+    font-size: 1em;
+    line-height: 1.4em;
+    font-weight: 300;
+    color: #000;
+}
+
+.btnUK
+{
+    padding: 15px 45px;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    display: inline-block;
+    margin-top: 2em;
+    background-color: transparent;
+    transition: .3s;
+    color: #000;
+}
+
+.btnUK:hover
+{
+    background-color: #000;
+    color: #fff;
+}
+
+/* konec UK */
+
+/* chaty 21. století start */
+
+.nadpis21
+{
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nadpis21 h2
+{
+    color: #fff;
+    font-size: 80px;
+    font-family: 'Dancing Script';
+}
+
+/* horská chata Šumava start */
+
+.containerSumava
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/sumava5.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.row4
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col4
+{
+    flex-basis: 50%;
+}
+
+.place .tuSumava
+{
+    width: 20px;
+    margin-left: -75px;
+    margin-bottom: 22px;
+    animation: bounce 2s infinite;
+}
+
+/* horská chata Šumava end */
+
+/* Jizerky start */
+
+.containerJizerky
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/jizerky1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.row5
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col5
+{
+    flex-basis: 50%;
+}
+
+.place .tuJizerky
+{
+    width: 20px;
+    margin-left: -56px;
+    margin-bottom: 52px;
+    animation: bounce 2s infinite;
+}
+
+/* Jizerky end */
+
+/* Vranovská přehrada start */
+
+.containerVranov
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/vranov1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.row6
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col6
+{
+    flex-basis: 50%;
+}
+
+.place .tuVranov
+{
+    width: 20px;
+    margin-left: -48px;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+/* Vranovská přehrada end */
+
+/* mapa světa start */
+
+.nadpisMapaSveta
+{
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nadpisMapaSveta h2
+{
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Dancing Script';
+}
+
+.wrapperMapaSveta
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    background: #000;
+}
+
+.containerMapaSveta
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+}
+
+.containerMapaSveta .mapaSveta
+{
+    display: flex;
+    height: 500px;
+    align-items: center;
+}
+
+.containerMapaSveta .tuSlovensko
+{
+    position: absolute;
+    width: 40px;
+    left: 270px;
+    top: 60px;
+    animation: none;
+}
+
+.containerMapaSveta .tuSlovensko:hover
+{
+    animation: bounceMapaSveta 2s infinite;
+    cursor: pointer;
+}
+
+.containerMapaSveta .tuNorskoFjord
+{
+    position: absolute;
+    width: 40px;
+    left: 257px;
+    top: 27px;
+    animation: none;
+}
+
+.containerMapaSveta .tuNorskoFjord:hover
+{
+    animation: bounceMapaSveta 2s infinite;
+    cursor: pointer;
+}
+
+.containerMapaSveta .tuNY
+{
+    position: absolute;
+    width: 40px;
+    left: 135px;
+    top: 72px;
+    animation: none;
+}
+
+.containerMapaSveta .tuNY:hover
+{
+    animation: bounceMapaSveta 2s infinite;
+    cursor: pointer;
+}
+
+.containerMapaSveta .tuChille
+{
+    position: absolute;
+    width: 40px;
+    left: 137px;
+    top: 190px;
+    animation: none;
+}
+
+.containerMapaSveta .tuChille:hover
+{
+    animation: bounceMapaSveta 2s infinite;
+    cursor: pointer;
+}
+
+.containerMapaSveta .tuNorsko
+{
+    position: absolute;
+    width: 40px;
+    left: 250px;
+    top: 35px;
+    animation: none;
+}
+
+.containerMapaSveta .tuNorsko:hover
+{
+    animation: bounceMapaSveta 2s infinite;
+    cursor: pointer;
+}
+
+.containerMapaSveta .tuChorvatsko
+{
+    position: absolute;
+    width: 40px;
+    left: 262px;
+    top: 67px;
+    animation: none;
+}
+
+.containerMapaSveta .tuChorvatsko:hover
+{
+    animation: bounceMapaSveta 2s infinite;
+    cursor: pointer;
+}
+
+.containerMapaSveta .tuThajsko
+{
+    position: absolute;
+    width: 40px;
+    left: 381px;
+    top: 108px;
+    animation: none;
+}
+
+.containerMapaSveta .tuThajsko:hover
+{
+    animation: bounceMapaSveta 2s infinite;
+    cursor: pointer;
+}
+
+/* mapa světa end */
+
+
+/* chaty 21. století konec */
+
+
+
+
+
+/* co se starými áčkovkami start */
+
+/* Slovensko start */
+
+.containerASlovensko
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/ASlovensko4.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.row7
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col7
+{
+    flex-basis: 50%;
+}
+
+.place .tuASlovensko
+{
+    width: 20px;
+    margin-left: -56px;
+    margin-bottom: 52px;
+    animation: bounce 2s infinite;
+}
+
+
+/* Slovensko end */
+
+/* Quebec start */
+
+.containerAQuebec
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/AQuebec3.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.row8
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col8
+{
+    flex-basis: 50%;
+}
+
+.place .tuAQuebec
+{
+    width: 20px;
+    margin-left: -56px;
+    margin-bottom: 52px;
+    animation: bounce 2s infinite;
+}
+
+
+/* Quebec end */
+
+/* Kalifornie start */
+
+.containerAKalifornie
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/AKalifornie1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.row9
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col9
+{
+    flex-basis: 50%;
+}
+
+.place .tuAKalifornie
+{
+    width: 20px;
+    margin-left: -56px;
+    margin-bottom: 52px;
+    animation: bounce 2s infinite;
+}
+
+
+/* Kalifornie end */
+
+
+/* Nolla start */
+
+.containerANolla
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/ANolla5.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.row10
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col10
+{
+    flex-basis: 50%;
+}
+
+.place .tuANolla
+{
+    width: 20px;
+    margin-left: -56px;
+    margin-bottom: 52px;
+    animation: bounce 2s infinite;
+}
+
+
+/* Nolla end */
+
+/* Chatky na čtyřech kolech start */
+
+.nadpisKola
+{
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nadpisKola h2
+{
+    color: #fff;
+    font-size: 80px;
+    font-family: 'Dancing Script';
+}
+
+
+/* Chatky na čtyřech kolech end */
+
+/* KvětLois start */
+
+.containerKvetLois
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/KvetLois1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.row11
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col11
+{
+    flex-basis: 50%;
+}
+
+.place .tuKvetLois
+{
+    width: 20px;
+    margin-left: -60px;
+    margin-bottom: 30px;
+    animation: bounce 2s infinite;
+}
+
+
+/* KvětLois end */
+
+/* Miramari start */
+
+.containerMiramari
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/Miramari1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.row12
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col12
+{
+    flex-basis: 50%;
+}
+
+.place .tuMiramari
+{
+    width: 20px;
+    margin-left: -70px;
+    margin-bottom: 20px;
+    animation: bounce 2s infinite;
+}
+
+
+/* Miramari end */
+
+/* Mobile Hut start */
+
+.containerMobileHut
+{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/MobileHut1.jpg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 80px;
+    padding-right: 0;
+    box-sizing: border-box;
+}
+
+.row13
+{
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col13
+{
+    flex-basis: 50%;
+}
+
+.place .tuMobileHut
+{
+    width: 20px;
+    margin-left: -70px;
+    margin-bottom: 35px;
+    animation: bounce 2s infinite;
+}
+
+
+/* Mobile Hut end */
+
+/* začátek maringotky inspirace */
+
+.nadpisMaringotky
+{
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nadpisMaringotky h2
+{
+    color: #fff;
+    font-size: 60px;
+    font-family: 'Dancing Script';
+}
+
+.wrapperMaringotky
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 75vh;
+    background: #000;
+}
+
+.containerMaringotky
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+}
+
+.containerMaringotky .cardMaringotky
+{
+    position: relative;
+    width: 500px;
+    height: 500px;
+    margin: 15px;
+    overflow: hidden;
+    border-radius: 5%;
+}
+
+.containerMaringotky .cardMaringotky .imgBxMaringotky,
+.containerMaringotky .cardMaringotky .contentBxMaringotky
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.containerMaringotky .cardMaringotky .imgBxMaringotky img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.containerMaringotky .cardMaringotky .contentBxMaringotky::before
+{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    transform: scaleX(0);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: left;
+    transition-delay: 0.5s;
+}
+
+.containerMaringotky .cardMaringotky:hover .contentBxMaringotky::before
+{
+    transform: scaleX(1);
+    transition: transform 0.5s ease-in-out;
+    transform-origin: right;
+    transition-delay: 0s;
+}
+
+.containerMaringotky .cardMaringotky .contentBxMaringotky
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.containerMaringotky .cardMaringotky .contentBxMaringotky .contentMaringotky
+{
+    position: relative;
+    padding: 30px;
+    z-index: 1;
+    transition: 0.5s;
+    transform: translateX(-500px);
+    transition-delay: 0s;
+}
+
+.containerMaringotky .cardMaringotky:hover .contentBxMaringotky .contentMaringotky
+{
+    transform: translateX(0px);
+    transition-delay: 0.5s;
+}
+
+.containerMaringotky .cardMaringotky .contentBxMaringotky .contentMaringotky h3
+{
+    font-size: 30px;
+    font-family: 'Dancing Script';
+    letter-spacing: 1px;
+}
+
+.containerMaringotky .cardMaringotky .contentBxMaringotky .contentMaringotky p
+{
+    font-size: 1em;
+    line-height: 1.4em;
+    font-weight: 300;
+    color: #000;
+}
+
+.btnMaringotky
+{
+    padding: 15px 45px;
+    border: 1px solid #000;
+    border-radius: 0.5em;
+    display: inline-block;
+    margin-top: 2em;
+    background-color: transparent;
+    transition: .3s;
+    color: #000;
+}
+
+.btnMaringotky:hover
+{
+    background-color: #000;
+    color: #fff;
+}
+
+/* konec maringotky inspirace */
+
+/* zápatí */
+
+.zapati p
+{
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+
+
+.nadpisA
+{
+    width: 100%;
+    height: 200px;
+    background-color: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nadpisA h2
+{
+    color: #fff;
+    font-size: 80px;
+    font-family: 'Dancing Script';
+}
+
+
+/* css kartiček start */
+
+.popup-image1
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image2
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image3
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image4
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+.popup-image5
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image6
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image7
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image8
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image9
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image10
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image11
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image12
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image13
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image14
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image15
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image16
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image17
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image18
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image19
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image20
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image21
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image22
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image23
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image24
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image25
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image26
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image27
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image28
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image29
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image30
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image31
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image32
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image33
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image34
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image35
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image36
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image37
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image38
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image39
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image40
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image41
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image42
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image43
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image44
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image45
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image46
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image47
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image48
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image49
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image50
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image51
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+.popup-image52
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    display: none;
+}
+
+
+.popup-image span
+{
+    position: absolute;
+    top: 0;
+    right: 10px;
+    font-size: 60px;
+    font-weight: bolder;
+    color: #fff;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.popup-image img
+{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #fff;
+    border-radius: 5px;
+    width: 750px;
+    object-fit: cover;
+    border-radius: 5%;
+}
+
+@media (max-width: 768px)
+{
+    .popup-image img{
+        width: 95%;
+    }
+}
+
+
+@keyframes bounceMapaSveta
+{
+    0% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+/* RESPONZIVITA */
+
+/* @media (max-width: 600px)
+{
+    #section img#mountains_front{
+        object-fit: contain;
+        width: 150%;
+        margin-top: 300px;
+    }
+
+    #section{
+        height: 80vh;
+    }
+
+    #text{
+        font-size: 10em;
+        top: 100px;
+        right: -1000px;
+    }
+
+    #btn{
+        padding: 30px 80px;
+        border-radius: 80px;
+        font-size: 3em;git config --global user.name
+        margin-left: -200px;
+        margin-bottom: 100px;
+    }
+
+    .uvod{
+        z-index: 10;
+        padding: 70px;
+    }
+
+    .uvod h2{
+        font-size: 1,5em;
+    }
+
+
+    .nadpisRekonstrukce{
+        height: 400px;
+    }
+
+    .containerAnicka{
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    h1{
+        font-size: 60px;
+    }
+
+    .btn{
+        padding: 25px 50px;
+    }
+
+    .popup{
+        min-width: 500px;
+    }
+
+    .containerMjolk{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .pozadiCompare{
+        height: 50vh;
+    }
+
+    .containerUjezera{
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .containerUK .cardUK .contentBxUK .contentUK h3{
+        font-size: 50px;
+    }
+
+    .containerUK .cardUK .contentBxUK .contentUK p{
+        font-size: 1.3em;
+    }
+
+    .btnUK{
+        padding: 25px 60px;
+    }
+
+    .nadpis21{
+        height: 300px;
+    }
+
+    .containerSumava{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .containerJizerky{
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .containerVranov{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .nadpisMapaSveta h2{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+    .wrapperMapaSveta{
+        min-height: 50vh;
+    }
+
+    .containerMapaSveta .mapaSveta{
+        height: 270px;
+    }
+    
+
+    .containerMapaSveta .tuSlovensko{
+        left: 138px;
+        top: 20px;
+        z-index: 10;
+    }
+
+    .containerMapaSveta .tuNorskoFjord{
+        left: 135px;
+        top: 5px;
+    }
+
+    .containerMapaSveta .tuNY{
+        left: 71px;
+        top: 27px;
+    }
+
+    .containerMapaSveta .tuChille{
+        left: 73px;
+        top: 90px;
+    }
+
+    .containerMapaSveta .tuNorsko{
+        left: 140px;
+        top: -3px;
+    }
+
+    .containerMapaSveta .tuChorvatsko{
+        left: 145px;
+        top: 25px;
+    }
+
+    .containerMapaSveta .tuThajsko{
+        left: 200px;
+        top: 40px;
+    }
+
+    .containerASlovensko{
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .containerAQuebec{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .containerAKalifornie{
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .containerANolla{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .containerKvetLois{
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .containerMiramari{
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .containerMobileHut{
+        padding-left: 30px;
+        padding-right: 20px;
+    }
+
+    .containerMaringotky .cardMaringotky .contentBxMaringotky .contentMaringotky h3{
+        font-size: 50px;
+    }
+
+    .containerMaringotky .cardMaringotky .contentBxMaringotky .contentMaringotky p{
+        font-size: 1.3em;
+    }
+
+    .btnMaringotky{
+        padding: 25px 60px;
+    }
+}
+
+@media (max-width: 1000px)
+{
+    #section img#mountains_front{
+        object-fit: contain;
+        width: 150%;
+        margin-top: 300px;
+    }
+
+    #section{
+        height: 80vh;
+    }
+
+    #text{
+        font-size: 10em;
+        top: 100px;
+        right: -1000px;
+    }
+
+    #btn{
+        padding: 20px 60px;
+        border-radius: 80px;
+        font-size: 3em;
+        margin-left: -200px;
+        background: #0083B0;
+    }
+
+    .uvod{
+        z-index: 10;
+        padding: 70px;
+    }
+
+} */

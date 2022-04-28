@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Native website</title>
+        <link rel="stylesheet" type="text/css" href="page1.css">
+        <link rel="stylesheet" type="text/css" href="arrows.css">
+    </head>
+    <body>
+        <header>
+        </header>
+        <section id="images">
+            <img src="../images/stars.png" id="stars">
+            <img src="../images/mountains_behind.png" id="mountains_behind">
+            <h2 id="text">Češi, národ chatařů</h2>
+            <a href="#sec1" id="btn">Čtěte dál</a>
+            <img src="../images/mountains_front.png" id="mountains_front">
+        </section>
+        <!--tady začíná stránka-->
+        <div class="sec1" id="sec1">
+            <h2>Pětina Čechů vlastní nějaký ten kousek přírody na venkově, kde jim stojí stará, opravená, 
+                nebo nová chatka, chata či chalupa. Proč je tolik milujeme a které realizace považujeme 
+                za ty nejvydařenější?<br></h2>
+        </div>
+
+        <div class="proklikyText">
+            <h2><a href="#nadpisSekce1">Rekonstrukce starých chalup a chat<br></a>
+                Chaty hodné 21. století<br>
+                Co se starými áčkovkami?<br>
+                Chatky na čtyřech kolech<br>
+            </h2>
+        </div>
+
+        <div class="proklikyPrechod" id="proklikyPrechod"></div><!--přechod modré do zelené-->
+
+        <div class="zelenePozadi">
+            <div class="nadpisSekce1" id="nadpisSekce1">
+                <h2>REKONSTRUKCE STARÝCH CHALUP A CHAT</h2>
+            </div>
+
+            <!--chaloupka anicka start-->
+            <div class="anicka_uvod">
+                <img class="anicka_hlavni" src="../images/anicka_hlavni.png">
+            </div>
+
+            <div class="anicka_mapa" id="anicka_mapa">
+                <img class="anicka_mapa" src="../images/mapa.png">
+            </div>
+
+            <div class="anicka" id="anicka">
+                <h2>1) Chaloupka Anička</h2>
+            </div>
+
+            <div class="boxAnicka">
+                <b>Dostavba chalupy kopíruje historické předlohy a používá soudobé prvky</b><br><br>
+                Chaloupku Aničku bylo nutné přistavět. Budova z počátku minulého století, postavená z vepřovicových cihel s kamenným soklem, si vyžadovala citlivý přístup.<br><br>
+                Orlické Záhoří leží v Orlickozáhorské brázdě, na pravém břehu řeky Divoké Orlice. Hlavní hřbet Orlických hor odděluje obec od vnitrozemí Čech. Název obce Orlické Záhoří vznikl v roce 1951 po sloučení obcí Kunštátu, Bedřichovky, Jadrné, Trčkova, Zelenky a Černé Vody. Chalupa se nachází v části Jadrná. Stávající budova z počátku minulého století, je postavená z vepřovicových cihel s omítkou a kamenným soklem, okna jsou dřevěná kastlová a stojí na kamenných základech. Tradiční sedlová střecha je zalomená s eternitovou krytinou a s dřevěným krovem.<br><br>
+                <b>V duchu hospodářských budov</b><br><br>
+                <i>„Dostavba respektuje původní půdorysné i hmotové řešení obytné části. Zastřešení sleduje tvar střechy stávající obytné části. Hlavní nosná konstrukce je z betonových tvárnic. Konstrukce sedlové střechy je dřevěná. Dům je obložen dřevěným obkladem z modřínu bez povrchové úpravy. Jednotlivá prkna obkladu jsou osazena vertikálně s překrytím mezer lištami,“ </i>
+                popisují architekti ze studia Refuel. Tento způsob obkladu je v regionu tradičním řešením obvodového pláště stodol a jiných obytných i nebytových staveb. Předpokládá se přirozené zestárnutí materiálu a změny barvy na šedostříbrnou. „Dřevěná okna jsou osazena v líci fasády. Tvar a velikost oken připomíná tradiční okenní otvory okolních stodol. Velikost oken odpovídají šířce jednotlivých prken a záměrně se ztrácí v dřevěném obkladu. Celé vizuální řešení objektu je inspirováno tradičními zemědělskými objekty v regionu. Ne však pouhým kopírováním historických předloh, ale pomocí prvků soudobé architektury.
+            </div>
+            <!--chaloupka anicka end-->
+            </div>
+
+        </div>
+
+            <!--fotogalerie Mjolk start-->
+
+
+
+        
+
+
+
+        <!--tady končí stránka-->
+
+
+        <script id="imagesPohyb">
+            let stars = document.getElementById('stars');
+            let mountains_behind = document.getElementById('mountains_behind');
+            let text = document.getElementById('text');
+            let btn = document.getElementById('btn');
+            let mountains_front = document.getElementById('mountains_front');
+            let header = document.querySelector('header');
+
+            window.addEventListener('scroll', function(){
+                let value = window.scrollY;
+                stars.style.left = value * 0.25 + 'px';
+                mountains_behind.style.top = value * 0.5 + 'px';
+                mountains_front.style.top = value * 0 + 'px';
+                text.style.marginRight = value * 4 + 'px';
+                text.style.marginTop = value * 1.5 + 'px';
+                btn.style.marginTop = value * 1.5 + 'px';
+                header.style.top = value * 0.5 + 'px';
+            })
+        </script>
+    </body>
+</html>

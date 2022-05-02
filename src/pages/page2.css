@@ -2264,6 +2264,25 @@ a
     }
 }
 
+@media (min-width: 1100px){
+    #btn{
+        color: rgb(101, 177, 50);
+        padding: 25px 60px;
+        margin-bottom: 0px;
+    }
+
+    .card{
+        width: 400px;
+        height: 400px;
+    }
+
+    .containerMapaSveta .mapaSveta{
+        height: 500px;
+    }
+}
+
+
+
 /* @media (max-width: 600px)
 {
     #section img#mountains_front{

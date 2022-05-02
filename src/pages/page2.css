@@ -125,7 +125,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-bottom: 50px;
+    padding-bottom: 0px;
 }
 
 .nadpisRekonstrukce h2
@@ -157,27 +157,6 @@
     width: 100px;
 }
 
-/* start Anička */
-
-.containerAnicka
-{
-    width: 100%;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/anicka5.jpeg);
-    background-position: center;
-    background-size: cover;
-    padding-left: 0;
-    padding-right: 0;
-    box-sizing: border-box;
-}
-
-.place .tuAnicka
-{
-    width: 30px;
-    margin-left: -40px;
-    margin-bottom: 40px;
-    animation: bounce 2s infinite;
-}
-
 @keyframes bounce
 {
     0% {
@@ -191,12 +170,6 @@
     }
 }
 
-/* konec Anička */
-
-/* .cards
-{
-    flex-basis: 50%;
-} */
 
 h1{
     font-family: 'Dancing Script';
@@ -624,6 +597,29 @@ a
     opacity: 50%;
 }
 
+/* start Anička */
+
+.containerAnicka
+{
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/anicka5.jpeg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    box-sizing: border-box;
+}
+
+.place .tuAnicka
+{
+    width: 30px;
+    margin-left: -40px;
+    margin-bottom: 40px;
+    animation: bounce 2s infinite;
+}
+
 
 /* start Mjolk (Buková) */
 
@@ -635,6 +631,8 @@ a
     background-size: cover;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
 }
 
@@ -718,6 +716,8 @@ a
     background-size: cover;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
 }
 
@@ -914,6 +914,8 @@ a
     background-size: cover;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
 }
 
@@ -937,6 +939,8 @@ a
     background-size: cover;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
 }
 
@@ -960,6 +964,8 @@ a
     background-size: cover;
     padding-left: 0;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
 }
 
@@ -1164,6 +1170,8 @@ a
     background-size: cover;
     padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
 }
 
@@ -1188,6 +1196,8 @@ a
     background-size: cover;
     padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
 }
 
@@ -1212,6 +1222,8 @@ a
     background-size: cover;
     padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
 }
 
@@ -1237,6 +1249,8 @@ a
     background-size: cover;
     padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
 }
 
@@ -1284,6 +1298,8 @@ a
     background-size: cover;
     padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
 }
 
@@ -1308,6 +1324,8 @@ a
     background-size: cover;
     padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
 }
 
@@ -1332,6 +1350,8 @@ a
     background-size: cover;
     padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
 }
 

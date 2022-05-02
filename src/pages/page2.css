@@ -1021,7 +1021,7 @@ a
 .containerMapaSveta .mapaSveta
 {
     display: flex;
-    height: 300px;
+    height: 250px;
     align-items: center;
 }
 
@@ -2208,11 +2208,61 @@ a
 }
 
 
-/* testovací text pro github */
-
-
 
 /* RESPONZIVITA */
+
+@media (min-width: 900px){
+    #btn{
+        color: red;
+        padding: 25px 60px;
+        margin-bottom: 50px;
+    }
+
+    h1{
+        font-size: 80px;
+    }
+
+    .popup{
+        min-width: 700px;
+    }
+
+    .popup p{
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .card{
+        width: 350px;
+        height: 350px;
+    }
+
+    #slider::-webkit-slider-thumb{
+        height: 80px;
+        width: 80px;
+    }
+
+    .containerMapaSveta .mapaSveta{
+        height: 400px;
+    }
+
+    .containerMaringotky .cardMaringotky{
+        width: 600px;
+        height: 600px;
+    }
+
+    .containerMaringotky .cardMaringotky .contentBxMaringotky .contentMaringotky{
+        transform: translateX(-600px);
+    }
+
+    .containerUK .cardUK{
+        width: 600px;
+        height: 600px;
+    }
+
+    .containerUK .cardUK .contentBxUK .contentUK{
+    transform: translateX(-600px);
+    }
+}
 
 /* @media (max-width: 600px)
 {

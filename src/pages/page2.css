@@ -148,6 +148,7 @@
 .cards
 {
     text-align: center;
+    
 }
 
 /* předdefinovaný styl mapy v každém containeru */
@@ -609,7 +610,6 @@ a
     padding-right: 0;
     padding-top: 100px;
     padding-bottom: 100px;
-    box-sizing: border-box;
 }
 
 .place .tuAnicka
@@ -2277,6 +2277,105 @@ a
     }
 
     .containerMapaSveta .mapaSveta{
+        height: 500px;
+    }
+}
+
+@media (min-width: 1600px){
+
+    #btn{
+        color: rgb(222, 203, 32);
+        padding: 25px 60px;
+        margin-bottom: 0px;
+    }
+
+     .text1{
+        width: 50%;
+        text-align: left;
+        padding-left: 50px;
+    }
+
+    .containerAnicka{
+        display: flex;
+        width: 100%;
+    }
+
+    .cards{
+        width: 50%;
+    } 
+
+    .card{
+        width: 300px;
+        height: 300px;
+    }
+
+    .containerMjolk{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerUjezera{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerSumava{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerJizerky{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerVranov{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerASlovensko{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerAQuebec{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerAKalifornie{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerANolla{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerKvetLois{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerMiramari{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerMobileHut{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerUK .cardUK{
+        width: 500px;
+        height: 500px;
+    }
+
+    .containerMaringotky .cardMaringotky{
+        width: 500px;
         height: 500px;
     }
 }

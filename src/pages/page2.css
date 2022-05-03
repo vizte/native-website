@@ -6,6 +6,11 @@
     scroll-behavior: smooth;
 }
 
+body
+{
+    min-width: 600px;
+}
+
 /* parallax start */
 
 .parallax
@@ -1021,7 +1026,7 @@ a
 .containerMapaSveta .mapaSveta
 {
     display: flex;
-    height: 250px;
+    height: 200px;
     align-items: center;
 }
 
@@ -2281,7 +2286,7 @@ a
     }
 }
 
-@media (min-width: 1600px){
+@media (min-width: 1200px){
 
     #btn{
         color: rgb(222, 203, 32);
@@ -2378,6 +2383,16 @@ a
         width: 500px;
         height: 500px;
     }
+
+    .popup{
+        min-width: 1000px;
+    }
+
+    .popup p{
+        font-size: 20px;
+        line-height: 25px;
+    }
+
 }
 
 

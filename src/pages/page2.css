@@ -6,6 +6,11 @@
     scroll-behavior: smooth;
 }
 
+body
+{
+    min-width: 600px;
+}
+
 /* parallax start */
 
 .parallax
@@ -20,9 +25,9 @@
 {
     position: relative;
     width: 100%;
-    height: 80vh;
+    height: 900px;
     padding: 100px;
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -52,9 +57,7 @@
 #section img#mountains_front
 {
     z-index: 10;
-    object-fit: contain;
-    width: 150%;
-    margin-top: 300px;
+    height: 100%;
 }
 
 #section img#stars
@@ -67,10 +70,10 @@
 {
     position: absolute;
     right: -1000px;
-    top: 100px;
+    top: 50px;
     color: #000000;
     white-space: nowrap;
-    font-size: 10em;
+    font-size: 9em;
     z-index: 9;
     font-family: 'Dancing Script';
 }
@@ -80,13 +83,16 @@
     text-decoration: none;
     font-family: 'Open Sans Condensed';
     display: inline-block;
-    padding: 8px 30px;
-    border-radius: 40px;
+    padding: 30px 90px;
+    border-radius: 80px;
     background: #fff;
     color: #0083B0;
-    font-size: 1.5em;
+    font-size: 3em;
     z-index: 9;
     transform: translateY(100px);
+    margin-left: -200px;
+    margin-bottom: 100px;
+    font-size: 60px;
 }
 
 #btn:hover
@@ -98,7 +104,10 @@
 .uvod
 {
     position: relative;
-    padding: 100px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 50px;
+    padding-top: 50px;
     background: #000000;
 }
 
@@ -115,12 +124,13 @@
 .nadpisRekonstrukce
 {
     width: 100%;
-    height: 200px;
+    height: 300px;
     background-color: #000;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-bottom: 0px;
 }
 
 .nadpisRekonstrukce h2
@@ -130,45 +140,27 @@
     font-family: 'Dancing Script';
 }
 
-.containerAnicka
+/* předdefinovaný styl textu v každém containeru */
+
+.text1
 {
-    width: 100%;
-    height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/anicka5.jpeg);
-    background-position: center;
-    background-size: cover;
-    padding-left: 80px;
-    padding-right: 0;
-    box-sizing: border-box;
+    text-align: center;
+    padding: 20px;
 }
 
-/* start Anička */
+/* předdefinovaný styl kartiček s fotkama v každém containeru */
 
-.row1
+.cards
 {
-    display: flex;
-    height: 88%;
-    align-items: center;
+    text-align: center;
+    
 }
 
-.col1
-{
-    flex-basis: 50%;
-}
-
-/* css MAPA start */
+/* předdefinovaný styl mapy v každém containeru */
 
 .place .mapa
 {
-    width: 80px;
-}
-
-.place .tuAnicka
-{
-    width: 20px;
-    margin-left: -40px;
-    margin-bottom: 40px;
-    animation: bounce 2s infinite;
+    width: 100px;
 }
 
 @keyframes bounce
@@ -184,14 +176,6 @@
     }
 }
 
-/* css MAPA end */
-
-/* konec Anička */
-
-.cards
-{
-    flex-basis: 50%;
-}
 
 h1{
     font-family: 'Dancing Script';
@@ -202,8 +186,8 @@ h1{
 p
 {
     color: #fff;
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 30px;
+    line-height: 40px;
     font-weight: lighter;
 }
 
@@ -211,13 +195,14 @@ a
 {
     color: #fff;
     text-decoration: none;
+    font-size: 20px;
 }
 
 .btn
 {
-    padding: 15px 45px;
+    padding: 35px 65px;
     border: 1px solid #fff;
-    border-radius: 0.5em;
+    border-radius: 1.5em;
     display: inline-block;
     margin-top: 2em;
     background-color: transparent;
@@ -233,8 +218,8 @@ a
 .popup
 {
     position: fixed;
-    padding: 30px;
-    max-width: 700px;
+    padding: 20px;
+    min-width: 550px;
     border-radius: 2em;
     top: 50%;
     left: 50%;
@@ -244,6 +229,22 @@ a
     opacity: 0;
     transition: opacity .5s, visibility 0s linear .5s;
     z-index: 1;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.popup p
+{
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+}
+
+.popup h2
+{
+    font-size: 40px;
+    line-height: 45px;
+    text-align: center;
 }
 
 .popup:target
@@ -253,27 +254,14 @@ a
     transition-delay: 0s;
 }
 
-/* .popup-close
-{
-    position: fixed;
-    padding: 10px;
-    padding: 10px;
-    max-width: 500px;
-    border-radius: 0.5em;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-} */
-
 .popup .close
 {
     position: absolute;
-    right: 10px;
+    left: 50%;
     top: -2px;
-    color: #000;
+    color: #003048;
     transition: color .3s;
-    font-size: 2em;
+    font-size: 4em;
     line-height: 1.5;
     font-weight: 700;
 }
@@ -311,12 +299,14 @@ a
 
 /* konec popup */
 
+/* kartičky fotky */
+
 .card
 {
-    width: 230px;
-    height: 230px;
+    width: 280px;
+    height: 280px;
     display: inline-block;
-    border-radius: 10px;
+    border-radius: 20px;
     padding: 15px 25px;
     box-sizing: border-box;
     cursor: pointer;
@@ -613,15 +603,26 @@ a
     opacity: 50%;
 }
 
-h5
+/* start Anička */
+
+.containerAnicka
 {
-    color: #fff;
-    text-shadow: 0 0 5px #999;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/anicka5.jpeg);
+    background-position: center;
+    background-size: cover;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
-.card:hover h5
+.place .tuAnicka
 {
-    color: #000;
+    width: 30px;
+    margin-left: -40px;
+    margin-bottom: 40px;
+    animation: bounce 2s infinite;
 }
 
 
@@ -630,30 +631,19 @@ h5
 .containerMjolk
 {
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/mjolk5.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 80px;
+    padding-left: 0;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-}
-
-.row2
-{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
-.col2
-{
-    flex-basis: 50%;
 }
 
 .place .tuMjolk
 {
-    width: 20px;
+    width: 30px;
     margin-left: -55px;
     margin-bottom: 50px;
     animation: bounce 2s infinite;
@@ -664,7 +654,7 @@ h5
 .pozadiCompare
 {
     width: 100%;
-    height: 100vh;
+    height: 80vh;
     background-color: #000;
     background-position: center;
     background-size: cover;
@@ -726,30 +716,19 @@ h5
 .containerUjezera
 {
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/ujezera7.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 80px;
+    padding-left: 0;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-}
-
-.row3
-{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
-.col3
-{
-    flex-basis: 50%;
 }
 
 .place .tuUjezera
 {
-    width: 20px;
+    width: 30px;
     margin-left: -65px;
     margin-bottom: 50px;
     animation: bounce 2s infinite;
@@ -774,6 +753,8 @@ h5
     color: #fff;
     font-size: 60px;
     font-family: 'Dancing Script';
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .wrapperUK
@@ -873,15 +854,15 @@ h5
 
 .containerUK .cardUK .contentBxUK .contentUK h3
 {
-    font-size: 30px;
+    font-size: 50px;
     font-family: 'Dancing Script';
     letter-spacing: 1px;
 }
 
 .containerUK .cardUK .contentBxUK .contentUK p
 {
-    font-size: 1em;
-    line-height: 1.4em;
+    font-size: 1.5em;
+    line-height: 1.6em;
     font-weight: 300;
     color: #000;
 }
@@ -911,7 +892,7 @@ h5
 .nadpis21
 {
     width: 100%;
-    height: 200px;
+    height: 300px;
     background-color: #000;
     text-align: center;
     display: flex;
@@ -924,6 +905,8 @@ h5
     color: #fff;
     font-size: 80px;
     font-family: 'Dancing Script';
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 /* horská chata Šumava start */
@@ -931,30 +914,19 @@ h5
 .containerSumava
 {
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/sumava5.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 80px;
+    padding-left: 0;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-}
-
-.row4
-{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
-.col4
-{
-    flex-basis: 50%;
 }
 
 .place .tuSumava
 {
-    width: 20px;
+    width: 30px;
     margin-left: -75px;
     margin-bottom: 22px;
     animation: bounce 2s infinite;
@@ -967,30 +939,19 @@ h5
 .containerJizerky
 {
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/jizerky1.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 80px;
+    padding-left: 0;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-}
-
-.row5
-{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
-.col5
-{
-    flex-basis: 50%;
 }
 
 .place .tuJizerky
 {
-    width: 20px;
+    width: 30px;
     margin-left: -56px;
     margin-bottom: 52px;
     animation: bounce 2s infinite;
@@ -1003,30 +964,19 @@ h5
 .containerVranov
 {
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/vranov1.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 80px;
+    padding-left: 0;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-}
-
-.row6
-{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
-.col6
-{
-    flex-basis: 50%;
 }
 
 .place .tuVranov
 {
-    width: 20px;
+    width: 30px;
     margin-left: -48px;
     margin-bottom: 20px;
     animation: bounce 2s infinite;
@@ -1059,7 +1009,7 @@ h5
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 75vh;
+    min-height: 50vh;
     background: #000;
 }
 
@@ -1076,7 +1026,7 @@ h5
 .containerMapaSveta .mapaSveta
 {
     display: flex;
-    height: 500px;
+    height: 200px;
     align-items: center;
 }
 
@@ -1174,7 +1124,7 @@ h5
 {
     position: absolute;
     width: 40px;
-    left: 381px;
+    left: 3px;
     top: 108px;
     animation: none;
 }
@@ -1196,35 +1146,43 @@ h5
 
 /* co se starými áčkovkami start */
 
+.nadpisA
+{
+    width: 100%;
+    height: 300px;
+    background-color: #000;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nadpisA h2
+{
+    color: #fff;
+    font-size: 80px;
+    font-family: 'Dancing Script';
+}
+
+
 /* Slovensko start */
 
 .containerASlovensko
 {
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/ASlovensko4.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 80px;
+    padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-}
-
-.row7
-{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
-.col7
-{
-    flex-basis: 50%;
 }
 
 .place .tuASlovensko
 {
-    width: 20px;
+    width: 30px;
     margin-left: -56px;
     margin-bottom: 52px;
     animation: bounce 2s infinite;
@@ -1238,30 +1196,19 @@ h5
 .containerAQuebec
 {
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/AQuebec3.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 80px;
+    padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-}
-
-.row8
-{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
-.col8
-{
-    flex-basis: 50%;
 }
 
 .place .tuAQuebec
 {
-    width: 20px;
+    width: 30px;
     margin-left: -56px;
     margin-bottom: 52px;
     animation: bounce 2s infinite;
@@ -1275,30 +1222,19 @@ h5
 .containerAKalifornie
 {
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/AKalifornie1.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 80px;
+    padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-}
-
-.row9
-{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
-.col9
-{
-    flex-basis: 50%;
 }
 
 .place .tuAKalifornie
 {
-    width: 20px;
+    width: 30px;
     margin-left: -56px;
     margin-bottom: 52px;
     animation: bounce 2s infinite;
@@ -1313,30 +1249,19 @@ h5
 .containerANolla
 {
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/ANolla5.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 80px;
+    padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-}
-
-.row10
-{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
-.col10
-{
-    flex-basis: 50%;
 }
 
 .place .tuANolla
 {
-    width: 20px;
+    width: 30px;
     margin-left: -56px;
     margin-bottom: 52px;
     animation: bounce 2s infinite;
@@ -1350,7 +1275,7 @@ h5
 .nadpisKola
 {
     width: 100%;
-    height: 200px;
+    height: 300px;
     background-color: #000;
     text-align: center;
     display: flex;
@@ -1373,30 +1298,19 @@ h5
 .containerKvetLois
 {
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/KvetLois1.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 80px;
+    padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-}
-
-.row11
-{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
-.col11
-{
-    flex-basis: 50%;
 }
 
 .place .tuKvetLois
 {
-    width: 20px;
+    width: 30px;
     margin-left: -60px;
     margin-bottom: 30px;
     animation: bounce 2s infinite;
@@ -1410,30 +1324,19 @@ h5
 .containerMiramari
 {
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/Miramari1.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 80px;
+    padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-}
-
-.row12
-{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
-.col12
-{
-    flex-basis: 50%;
 }
 
 .place .tuMiramari
 {
-    width: 20px;
+    width: 30px;
     margin-left: -70px;
     margin-bottom: 20px;
     animation: bounce 2s infinite;
@@ -1447,30 +1350,19 @@ h5
 .containerMobileHut
 {
     width: 100%;
-    height: 100vh;
     background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url(../images/MobileHut1.jpg);
     background-position: center;
     background-size: cover;
-    padding-left: 80px;
+    padding-top: 100px;
     padding-right: 0;
+    padding-top: 100px;
+    padding-bottom: 100px;
     box-sizing: border-box;
-}
-
-.row13
-{
-    display: flex;
-    height: 88%;
-    align-items: center;
-}
-
-.col13
-{
-    flex-basis: 50%;
 }
 
 .place .tuMobileHut
 {
-    width: 20px;
+    width: 30px;
     margin-left: -70px;
     margin-bottom: 35px;
     animation: bounce 2s infinite;
@@ -1484,7 +1376,7 @@ h5
 .nadpisMaringotky
 {
     width: 100%;
-    height: 200px;
+    height: 300px;
     background-color: #000;
     text-align: center;
     display: flex;
@@ -1495,8 +1387,11 @@ h5
 .nadpisMaringotky h2
 {
     color: #fff;
-    font-size: 60px;
+    font-size: 80px;
     font-family: 'Dancing Script';
+    padding-top: 100px;
+    /* margin-left: 40px;
+    margin-right: 40px; */
 }
 
 .wrapperMaringotky
@@ -1506,6 +1401,8 @@ h5
     align-items: center;
     min-height: 75vh;
     background: #000;
+    padding-top: 100px;
+    padding-bottom: 100px;
 }
 
 .containerMaringotky
@@ -1596,15 +1493,15 @@ h5
 
 .containerMaringotky .cardMaringotky .contentBxMaringotky .contentMaringotky h3
 {
-    font-size: 30px;
+    font-size: 50px;
     font-family: 'Dancing Script';
     letter-spacing: 1px;
 }
 
 .containerMaringotky .cardMaringotky .contentBxMaringotky .contentMaringotky p
 {
-    font-size: 1em;
-    line-height: 1.4em;
+    font-size: 1.5em;
+    line-height: 1.5em;
     font-weight: 300;
     color: #000;
 }
@@ -1642,27 +1539,6 @@ h5
     align-items: center;
     font-size: 1em;
 }
-
-
-
-.nadpisA
-{
-    width: 100%;
-    height: 200px;
-    background-color: #000;
-    text-align: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.nadpisA h2
-{
-    color: #fff;
-    font-size: 80px;
-    font-family: 'Dancing Script';
-}
-
 
 /* css kartiček start */
 
@@ -2336,7 +2212,190 @@ h5
     }
 }
 
+
+
 /* RESPONZIVITA */
+
+@media (min-width: 900px){
+    #btn{
+        color: red;
+        padding: 25px 60px;
+        margin-bottom: 50px;
+    }
+
+    h1{
+        font-size: 80px;
+    }
+
+    .popup{
+        min-width: 700px;
+    }
+
+    .popup p{
+        font-size: 25px;
+        line-height: 35px;
+    }
+
+    .card{
+        width: 350px;
+        height: 350px;
+    }
+
+    #slider::-webkit-slider-thumb{
+        height: 80px;
+        width: 80px;
+    }
+
+    .containerMapaSveta .mapaSveta{
+        height: 400px;
+    }
+
+    .containerMaringotky .cardMaringotky{
+        width: 600px;
+        height: 600px;
+    }
+
+    .containerMaringotky .cardMaringotky .contentBxMaringotky .contentMaringotky{
+        transform: translateX(-600px);
+    }
+
+    .containerUK .cardUK{
+        width: 600px;
+        height: 600px;
+    }
+
+    .containerUK .cardUK .contentBxUK .contentUK{
+    transform: translateX(-600px);
+    }
+}
+
+@media (min-width: 1100px){
+    #btn{
+        color: rgb(101, 177, 50);
+        padding: 25px 60px;
+        margin-bottom: 0px;
+    }
+
+    .card{
+        width: 400px;
+        height: 400px;
+    }
+
+    .containerMapaSveta .mapaSveta{
+        height: 500px;
+    }
+}
+
+@media (min-width: 1200px){
+
+    #btn{
+        color: rgb(222, 203, 32);
+        padding: 25px 60px;
+        margin-bottom: 0px;
+    }
+
+     .text1{
+        width: 50%;
+        text-align: left;
+        padding-left: 50px;
+    }
+
+    .containerAnicka{
+        display: flex;
+        width: 100%;
+    }
+
+    .cards{
+        width: 50%;
+    } 
+
+    .card{
+        width: 300px;
+        height: 300px;
+    }
+
+    .containerMjolk{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerUjezera{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerSumava{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerJizerky{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerVranov{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerASlovensko{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerAQuebec{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerAKalifornie{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerANolla{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerKvetLois{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerMiramari{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerMobileHut{
+        display: flex;
+        width: 100%;
+    }
+
+    .containerUK .cardUK{
+        width: 500px;
+        height: 500px;
+    }
+
+    .containerMaringotky .cardMaringotky{
+        width: 500px;
+        height: 500px;
+    }
+
+    .popup{
+        min-width: 1000px;
+    }
+
+    .popup p{
+        font-size: 20px;
+        line-height: 25px;
+    }
+
+}
+
+
 
 /* @media (max-width: 600px)
 {
